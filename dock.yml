@@ -1,0 +1,40 @@
+---
+- name: Configure the Dock
+  hosts: osx
+
+  tasks:
+    - name: Enable - Automatically hide and show the Dock
+      command: defaults write com.apple.dock autohide -bool true
+
+    - name: Disable - Animation when hiding/showing the Dock
+      command: defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+    - name: Disable - Animate opening applications from the Dock
+      command: defaults write com.apple.dock launchanim -bool false
+
+    - name: Disable - Show recent applications in Dock
+      command: defaults write com.apple.dock show-recents -bool false
+
+    - name: Change - minimize/maximize window effect
+      command: defaults write com.apple.dock mineffect -string "scale"
+
+    - name: Clear the dock
+      command: dockutil --remove all
+
+    - name: Add Launchpad
+      command: dockutil --add /System/Applications/Launchpad.app
+
+    - name: Add Apple Music
+      command: dockutil --add /System/Applications/Music.app
+
+    - name: Add Messages
+      command: dockutil --add /System/Applications/Messages.app
+
+    - name: Add Firefox
+      command: dockutil --add /Applications/Firefox.app
+
+    - name: Add Visual Studio Code
+      command: dockutil --add /Applications/Visual\ Studio\ Code.app
+
+    - name: Add iTerm
+      command: dockutil --add /Applications/iTerm.app
