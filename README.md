@@ -28,6 +28,16 @@ It is best practice to start from a clean slate which include a clean wipe of th
     xcode-select --install
     ```
 2. Install [Homebrew](https://docs.brew.sh/Installation)
+
+    Update `$PATH` in `.bashrc` to include Homebrew binaries
+
+    ```
+    export PATH=/opt/homebrew/bin:$PATH
+    ```
+    then
+    ```
+    source ~/.bashrc
+    ```
 3. Install [Python3](https://www.python.org/)
     ```
     brew install python3
@@ -40,6 +50,10 @@ It is best practice to start from a clean slate which include a clean wipe of th
     
     ```
     export PATH=$PATH:~/Library/Python/3.9/bin
+    ```
+    then
+    ```
+    source ~/.bashrc
     ```
 5. Create a directory to store repositories in and clone the repo
     ```
