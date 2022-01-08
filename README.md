@@ -29,7 +29,7 @@ It is best practice to start from a clean slate which include a clean wipe of th
     ```
 2. Install [Homebrew](https://docs.brew.sh/Installation)
 
-    Update `$PATH` in `.bashrc` to include Homebrew binaries
+    Update `$PATH` in `.bashrc` to include Homebrew binaries. Ensure Homebrew binaries come first as this will be important to ensure packages such as `python3` and `pip3` use the Homebrew binaries for these over the built-in system versions
 
     ```
     export PATH=/opt/homebrew/bin:$PATH
@@ -44,7 +44,7 @@ It is best practice to start from a clean slate which include a clean wipe of th
     ```
 4. Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
     ```
-    python3.9 -m pip install --user ansible
+    python3 -m pip install --user ansible
     ```
     Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
     
