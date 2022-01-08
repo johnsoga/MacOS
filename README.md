@@ -60,3 +60,27 @@ Customizations on the docks animations & layout are done using the `dock.yml` pl
 ```
 ansible-playbook -i ansible_hosts.txt dock.yml
 ```
+
+## Automator Automations
+In general trying to automate setting MacOS/OSX System Preferences is a bit of a hit-or-miss game filled with trial and error. While some options can be reliably set using the `defaults` command, a popular example [here](https://github.com/mathiasbynens/dotfiles/blob/main/.macos), this can involve logging out or resetting the machine which is not desirable. Even more so there is not a 1-to-1 mapping of System Preferences to plist's to be updated via `defaults` leaving some configurations that seemingly cannot be set that way. To me this leaves the better approach to be using the tools(however irritating they maybe) that Apple has provided, put simply Automator. I've created an Automator application that can be double-clicked to install that will go through and set various System Preferences namely:
+
+##### Track Pad 
+* Look up & data detectors (Disable)
+* Secondary click/Two-finger right-click (Enable)
+* Tap to click (Enable)
+* Scroll direction: Natural (Disable)
+* App Expose (Enable)
+
+##### MenuBar
+* Battery Percentage in Menu Bar (Enable)
+* Show Spotlight in Menu Bar (Disable)
+
+##### Security
+* Require password immediately after sleep (Enable)
+* Firewall: Turn on (Enable)
+
+```
+cd automator
+unzip SystemPreferencesSetup.zip
+open SystemPreferencesSetup.app
+```
