@@ -84,3 +84,7 @@ cd automator
 unzip SystemPreferencesSetup.zip
 open SystemPreferencesSetup.app
 ```
+
+## Post-Installation
+* Open Little Snitch to finish installation and activate
+* [Remove](https://discussions.apple.com/thread/252093642) Game Center account, personally I don't use it on Laptops/Desktops
