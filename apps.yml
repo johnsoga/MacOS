@@ -4,6 +4,7 @@
 
   vars:
     gui_apps:
+      - balenaetcher
       - cyberduck
       - firefox
       - google-chrome
@@ -13,6 +14,7 @@
       - tunnelblick
       - visual-studio-code
       - vlc
+      - wireshark
     cli_apps:
       - dockutil
       - iperf3
