@@ -4,13 +4,17 @@
 
   vars:
     gui_apps:
+      - ableton-live-suite
       - balenaetcher
       - cyberduck
       - firefox
       - google-chrome
       - iterm2
+      - logi-options-plus
       - little-snitch
       - microsoft-office
+      - musescore
+      - raspberry-pi-imager
       - tunnelblick
       - visual-studio-code
       - vlc
