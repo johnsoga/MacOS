@@ -10,7 +10,6 @@
       - firefox
       - google-chrome
       - iterm2
-      - logi-options-plus
       - little-snitch
       - microsoft-office
       - musescore
@@ -22,6 +21,8 @@
     cli_apps:
       - dockutil
       - iperf3
+    drivers:
+      - logi-options-plus
 
   tasks:
     - name: Ensure Homebrew is up-to-date
@@ -38,3 +39,13 @@
         name: "{{ item }}"
         state: present
       with_items: "{{ gui_apps }}"
+
+    - name: Install Homebrew Drivers Repository
+      community.general.homebrew_tap:
+        name: homebrew/cask-drivers
+
+    - name: Install Homebrew Driver Applications
+      homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ drivers }}"
