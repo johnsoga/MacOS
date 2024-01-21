@@ -24,7 +24,7 @@
 ## Prerequisite
 It is best practice to start from a clean slate which include a clean wipe of the machine to ensure a clean/fresh install. Depending on your level of paranoia this would include wiping a brand new machine as well. Possibly the most important detail would be to turn on Filevault. You will only be prompted for this during the inital machine setup after you've entered you iCloud details otherwise after going through the intial setup prompts you can enable afterwards see [here](https://support.apple.com/en-us/HT204837). Afterwards, perform the following to setup the machine:
 
-1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement)
+1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement). In atleast v4.2.4 or higher it appears the installer will automatically install Xcode Tools if required
     ```
     xcode-select --install
     ```
