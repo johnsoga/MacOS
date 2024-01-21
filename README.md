@@ -50,7 +50,7 @@ It is best practice to start from a clean slate which include a clean wipe of th
     Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
     
     ```
-    export PATH=$PATH:~/Library/Python/3.9/bin
+    export PATH=$PATH:~/Library/Python/3.11/bin
     ```
     then
     ```
