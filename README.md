@@ -19,6 +19,8 @@
 ### CLI APPS:
 - [dockutil](https://github.com/kcrawford/dockutil)
 - [iperf3](https://iperf.fr/iperf-download.php)
+- [bash](https://tiswww.case.edu/php/chet/bash/bashtop.html)
+- [check](https://libcheck.github.io/check/)
 
 ### AppStore Apps:
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
