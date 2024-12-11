@@ -24,6 +24,10 @@
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Bitwarden](https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744)
 
+### Browser Plugins
+Chrome
+- Bitwarden
+
 ***
 
 ## Prerequisite
