@@ -21,6 +21,8 @@
     cli_apps:
       - dockutil
       - iperf3
+      - bash
+      - check
 
   tasks:
     - name: Ensure Homebrew is up-to-date
