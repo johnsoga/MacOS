@@ -33,14 +33,24 @@ Chrome
 ***
 
 ## Prerequisite
-It is best practice to start from a clean slate which include a clean wipe of the machine to ensure a clean/fresh install. Depending on your level of paranoia this would include wiping a brand new machine as well. Possibly the most important detail would be to turn on Filevault. You will only be prompted for this during the inital machine setup after you've entered you iCloud details otherwise after going through the intial setup prompts you can enable afterwards see [here](https://support.apple.com/en-us/HT204837). Afterwards, perform the following to setup the machine:
+It's best practice to start from a clean slate when possible this means a clean wipe of the machine to ensure a fresh install of the OS. Depending on your level of paranoia this would apply to a brand new (purchase) machine as well. Ensure you turn on Filevault. You'll be prompted for this during the inital machine setup, after you've entered your iCloud credentials or you can enable it after setup as well; see [here](https://support.apple.com/en-us/HT204837). After installing the OS perform the following:
 
-1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools (Homebrew Requirement). In atleast v4.2.4 or higher it appears the installer will automatically install Xcode Tools if required
+1. Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or Xcode Tools as it's required for Homebrew.
     ```
     xcode-select --install
     ```
-2. Install [Homebrew](https://docs.brew.sh/Installation)
+2. Install [Homebrew](https://docs.brew.sh/Installation), the [Package Installer(.pkg)](https://github.com/Homebrew/brew/releases) is currently the preferred installation method
 
+3. Clone this repo:
+   ```
+    mkdir ~/Documents/Code
+    cd ~/Documents/Code
+    git clone https://github.com/johnsoga/MacOS.git
+    cd MacOS
+    ```
+4. Clone dotfiles repo:
+   #TODO: create dotfiles repo
+      
     Update `$PATH` in `.bashrc` to include Homebrew binaries. Ensure Homebrew binaries come first as this will be important to ensure packages such as `python3` and `pip3` use the Homebrew binaries for these over the built-in system versions
 
     ```
@@ -50,37 +60,9 @@ It is best practice to start from a clean slate which include a clean wipe of th
     ```
     source ~/.bashrc
     ```
-3. Install [Python3](https://www.python.org/)
-    ```
-    brew install python3
-    ```
-4. Install [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-    ```
-    python3 -m pip install --user ansible
-    ```
-    Update `$PATH` in `.bashrc` as this is where the Ansible binaries are installed
-    
-    ```
-    export PATH=$PATH:~/Library/Python/3.11/bin
-    ```
-    then
-    ```
-    source ~/.bashrc
-    ```
-5. Create a directory to store repositories in and clone the repo
-    ```
-    mkdir ~/Documents/Code
-    cd ~/Documents/Code
-    git clone https://github.com/johnsoga/MacOS.git
-    cd MacOS
-    ```
+5. Run the `installer.sh` to install Python3 and Ansible and Mac Applications (GUI & CLI)
 
 ## Installation
-#### Installing Applications
-All applications listed above will be installed using the `apps.yml` playbook
-```
-ansible-playbook -i ansible_hosts.txt apps.yml
-```
 #### Configuring the Dock
 Customizations on the docks animations & layout are done using the `dock.yml` playbook
 ```
