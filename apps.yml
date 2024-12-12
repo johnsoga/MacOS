@@ -11,13 +11,13 @@
       - google-chrome
       - iterm2
       - little-snitch
-      - logi-options-plus
       - microsoft-office
       - musescore
       - raspberry-pi-imager
       - visual-studio-code
       - vlc
       - wireshark
+      
     cli_apps:
       - dockutil
       - iperf3
